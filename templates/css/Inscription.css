@@ -1,0 +1,19 @@
+body{
+    background-image: url(../images/back4.jpg);
+    background-size: cover;
+    background-position: center center; 
+}
+
+#ui{
+    background-color: #333;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+#ui label,h2 {
+    color: #fff;
+    
+
+}
