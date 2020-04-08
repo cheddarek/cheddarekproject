@@ -27,32 +27,36 @@
                             </div>
                             <div class="col-lg-6">
                                     <label> Prénom </label>
-                                    <input type="text" name="Prenom" class="form-control" placeholder="Saisir votre prénom">
+                                    <input type="text" name="Prénom" class="form-control" placeholder="Saisir votre prénom">
                             </div>
                         </div>
                         <br>
                         
                         <label for="exampleInputEmail1">Adresse email</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Saisir votre adresse email">
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Saisir votre adresse email">
                          <br>
                         <label >Contact téléphonique</label>
-                        <input type="number" name="contact" class="form-control" placeholder="Saisir votre numéro de téléphone">
+                        <input type="number"  class="form-control" placeholder="Saisir votre numéro de téléphone" name="numéro">
+                        <br>
+                        <label >Numéro de la carte nationale d'identité</label>
+                        <input type="number"  class="form-control" placeholder="Saisir votre numéro de CIN" name="CIN">
+                        <br>
 
                         <div class="row">
                                 <div class="col-lg-6">
                                     <label> Mot de passe </label>
-                                    <input type="password" name="password" class="form-control" placeholder="Saisir un mot de passe">
+                                    <input type="password" class="form-control" placeholder="Saisir un mot de passe" name="passwor">
                                 </div>
                                 <div class="col-lg-6">
                                     <label> Mot de passe re-saisi </label>
-                                    <input type="password"  class="form-control" placeholder="Saisir le mot de passe de nouveau">
+                                    <input type="password"  class="form-control" placeholder="Saisir le mot de passe de nouveau" name="Password">
                                 </div>
                         </div>
                         <br>
 
-                        <label > Choisir le lieu de livraison : </label>
+                        <label > Choisir la municipalité : </label>
 
-                        <select class ="form-control" name="lieu">
+                        <select class ="form-control">
                             <option >Manar 1</option>
                             <option >Manar 2</option>
                             <option >Manar 3</option>
@@ -64,7 +68,7 @@
 
                         <label > Tu es :</label>
 
-                        <select class ="form-control" name="type">
+                        <select class ="form-control">
                             <option >Client</option>
                             <option >Vendeur</option>
                         </select>
