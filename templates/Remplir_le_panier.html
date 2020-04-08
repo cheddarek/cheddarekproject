@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remplir le panier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/Remplir_le_panier.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b5618f4aef.js" crossorigin="anonymous"></script>
+</head>
+<body id="page-top">
+        <div class="navbar navbar-expand navbar-dark bg-dark static-top">
+                <ul class="navbar-nav ml-auto ml-md-0">
+                    <li class="nav-item dropright no-arrow">
+                        <a href="#" class="nav-link dropdown-toggle " role="button" id="userDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                            <i class="fas fa-user-circle fa-fw" id=logout></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" >
+                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#logoutModal">Se Déconnecter</a>
+                        </div>
+        
+                    </li>
+                </ul>
+        </div>
+        <div id="wrapper">
+            <div id="content-wrapper">
+                <div class="container-fluid">
+                    <div class="col-12-sm">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <i class="fas fa-table">
+
+                                </i>
+                                Choisir les produits alimentaires
+                            </div>
+                            <form action="demande.php" method="post">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="dataTables_length" id="dataTable_length">
+                                                            <div class="col-sm-12-col-md-6">
+                                                                    <div class="dataTables_filter" id="dataTable_filter">
+                                                                        
+                                                                            <label><i class="fas fa-search"></i>
+                                                                                <strong>Chercher </strong>
+                                                                                <input type="search" placeholder="Chercher" name="search" class="form-control form-control-sm" placeholder aria-controls="dataTable">
+                                                                            </label>
+                                                                            <button type="button" class="btn btn-primary"> <i class="fas fa-search"></i> </button>
+                                                                        
+                                                                    </div>
+                
+                                                            </div>
+                                                    </div>
+
+                                            
+                                                </div>
+                                            </div>
+                                        <div class="container">    
+                                            <div class="row align-items-start">
+                                                <div class="col-sm-4">
+                                                    <table class="table table-bordered dataTable no-footer table-striped" id="dataTable" width=100% cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width:100%;">
+                                                        <thead>
+                                                            <tr role="row" style="background-color:skyblue;">
+                                                                <th class="sorting_asc" tabindex="0" aria-controls=" dataTable" rowspan="1" colspan="1" aria-sort="ascending"  style=" width:255px;">
+                                                                <label style="font-family: 'Times New Roman', Times, serif; font-size: larger;" > Aliment </label></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr role="row" class="odd">
+                                                                <input type="hidden" name="members[]" value="29">
+                                                                <td class="sorting_1">
+                                                                    <img  class="img-thumb" width="100" height="100" src="images/break.jpg" alt="Break">  Break 
+                                                                    <a>
+                                                                        
+                                                                        (<b>0.4 dt</b>
+                                                                        /piéce)
+                                                                    </a>
+                                                                    <br>
+                                                                    <strong>Nombre de piéces :</strong>
+                                                                    <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre0" value="0">
+                                                                    <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre1" value="1">
+                                                                    <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre2" value="2">
+
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr role="row" class="even">
+                                                                    <input type="hidden" name="members[]" value="45">
+                                                                    <td class="sorting_1">
+                                                                        <img  class="img-thumb" width="100" height="100" src="images/passion.jpg" alt="Passion"> Passion
+                                                                        <a>
+                                                                            
+                                                                            (<b>3.2 dt</b>
+                                                                            /piéce)
+                                                                        </a>
+                                                                        <br>
+                                                                        <strong>Nombre de piéces :</strong>
+                                                                        <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre3" value="3">
+                                                                        <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre4" value="4">
+                                                                        <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre5" value="5">
+    
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                        <input type="hidden" name="members[]" value="30">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/chocolat.png" alt="Said">  Said
+                                                                            <a>
+                                                                                
+                                                                                (<b>2.6 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                            <strong>Nombre de piéces :</strong>
+                                                                            <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre6" value="6">
+                                                                            <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre7" value="7">
+                                                                            <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre8" value="8">
+        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                        <input type="hidden" name="members[]" value="50">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/tris.jpg" alt="Tris">  Tris
+                                                                            <a>
+                                                                                
+                                                                                (<b>0.9 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                            <strong>Nombre de piéces :</strong>
+                                                                            <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                            <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                            <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                        <input type="hidden" name="members[]" value="31">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/chocoline.jpeg" alt="Chocoline">  Chocoline
+                                                                            <a>
+                                                                                
+                                                                                (<b>3 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                            <strong>Nombre de piéces :</strong>
+                                                                            <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre12" value="12">
+                                                                            <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre13" value="13">
+                                                                            <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre14" value="14">
+        
+                                                                    </td>
+                                                                </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                <div class="col-sm-4">
+                                                        <table class="table table-bordered dataTable no-footer table-striped" id="dataTable" width=100% cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width:100%;">
+                                                            <thead>
+                                                                <tr role="row" style="background-color:skyblue;">
+                                                                    <th class="sorting_asc" tabindex="0" aria-controls=" dataTable" rowspan="1" colspan="1" aria-sort="ascending"  style=" width:255px;">
+                                                                    <label style="font-family: 'Times New Roman', Times, serif; font-size:larger;" > Aliment </label></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr role="row" class="odd">
+                                                                    <input type="hidden" name="members[]" value="29">
+                                                                    <td class="sorting_1">
+                                                                        <img  class="img-thumb" width="100" height="100" src="images/fell2.jpg" alt="Fell2  Randa">  Fell2 Randa
+                                                                        <a>
+                                                                            
+                                                                            (<b>0.8 dt</b>
+                                                                            /piéce)
+                                                                        </a>
+                                                                        <br>
+                                                                        <strong>Nombre de piéces :</strong>
+                                                                        <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre15" value="15">
+                                                                        <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre16" value="16">
+                                                                        <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre17" value="17">
+    
+    
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                        <input type="hidden" name="members[]" value="45">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/fromage.jpg" alt="Fromage président">  Fromage président
+                                                                            <a>
+                                                                                
+                                                                                (<b>2.6 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                            <strong>Nombre de piéces :</strong>
+                                                                            <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre18" value="18">
+                                                                            <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre19" value="19">
+                                                                            <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre20" value="20">
+        
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="30">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/harissa.png" alt="Harissa Jouda">  Harissa Jouda
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>1.4 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre21" value="21">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre22" value="22">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre23" value="23">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                            <input type="hidden" name="members[]" value="50">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/huile.jpg" alt="Huile Nejma">  Huile Nejma
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>2.7 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre24" value="24">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre25" value="25">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre26" value="26">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="31">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/kross.jpg" alt="Kross">  Kross 
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>3 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre27" value="27">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre28" value="28">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre29" value="29">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        
+                                                    </div>
+                                                <div class="col-sm-4 ">
+                                                        <table class="table table-bordered dataTable no-footer table-striped" id="dataTable" width=100% cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width:100%;">
+                                                            <thead>
+                                                                <tr role="row" style="background-color:skyblue;">
+                                                                    <th class="sorting_asc" tabindex="0" aria-controls=" dataTable" rowspan="1" colspan="1" aria-sort="ascending"  style=" width:255px;">
+                                                                    <label style="font-family: 'Times New Roman', Times, serif; font-size:larger;" > Aliment </label></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr role="row" class="odd">
+                                                                    <input type="hidden" name="members[]" value="2">
+                                                                    <td class="sorting_1">
+                                                                        <img  class="img-thumb" width="100" height="100" src="images/chorba.jpg" alt="Chorba warda">  Chorba Warda
+                                                                        <a>
+                                                                            
+                                                                            (<b>0.8 dt</b>
+                                                                            /piéce)
+                                                                        </a>
+                                                                        <br>
+                                                                        <strong>Nombre de piéces :</strong>
+                                                                        <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre30" value="30">
+                                                                        <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre31" value="31">
+                                                                        <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre32" value="32">
+    
+                                                                    </td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                        <input type="hidden" name="members[]" value="4">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/couscousDari.jpg" alt="Couscous diari">  Couscous diari
+                                                                            <a>
+                                                                                
+                                                                                (<b>0.8 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                            <strong>Nombre de piéces :</strong>
+                                                                            <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre33" value="33">
+                                                                            <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre34" value="34">
+                                                                            <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre35" value="35">
+        
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="32">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/couscous.png" alt="Couscous Randa">  Couscous Randa
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>0.8 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre36" value="36">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre37" value="37">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre38" value="38">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                            <input type="hidden" name="members[]" value="28">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/couscousWarda.jfif" alt="Couscous Warda">  Couscous Warda
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>0.8 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre39" value="39">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre40" value="40">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre41" value="41">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="1">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/farine.png" alt="Farine warda">  Farine Warda
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>0.6 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre42" value="42">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre43" value="43">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre44" value="44">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                            </tbody>
+                                                        </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTable_info" id="dataTable_info" role="status" aria-live="polite">15  élements sont affichés parmi 27</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                            <ul class="pagination">
+                                                    <li class="paginate_button page-item previous" id="dataTable_previous">
+                                                        <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Précedent</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item ">
+                                                        <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item active">
+                                                        <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item next" id="dataTable_next">
+                                                        <a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">Next</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="wrapper">
+                <div id="content-wrapper">
+                    <div class="container-fluid">
+                        <div class="col-12-sm">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <i class="fas fa-table">
+    
+                                    </i>
+                                    Choisir les produits de propreté
+                                </div>
+                                <form action="demande.php" method="post">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="dataTable_length">
+                                                                    <div class="col-sm-12-col-md-6">
+                                                                            <div class="dataTables_filter" id="dataTable_filter">
+                                                                                
+                                                                                    <label><i class="fas fa-search"></i>
+                                                                                        <strong>Chercher </strong>
+                                                                                        <input type="search" placeholder="Chercher" class="form-control form-control-sm" placeholder aria-controls="dataTable">
+                                                                                    </label>
+                                                                                    <button type="button" class="btn btn-primary"> <i class="fas fa-search"></i> </button>
+                                                                                
+                                                                            </div>
+                        
+                                                                    </div>
+                                                            </div>
+        
+                                                    
+                                                        </div>
+                                                    </div>
+                                            <div class="container">    
+                                                <div class="row align-items-start">
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-bordered dataTable no-footer table-striped" id="dataTable" width=100% cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width:100%;">
+                                                            <thead>
+                                                                <tr role="row" style="background-color:skyblue;">
+                                                                    <th class="sorting_asc" tabindex="0" aria-controls=" dataTable" rowspan="1" colspan="1" aria-sort="ascending"  style=" width:255px;">
+                                                                    <label style=" font-family: 'Times New Roman', Times, serif; font-size:larger;" > Produit </label></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="29">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/javel.jpg" alt="javel">  javel
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>1 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre0" value="0">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre1" value="1">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre2" value="2">
+            
+            
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                                <input type="hidden" name="members[]" value="29">
+                                                                                <td class="sorting_1">
+                                                                                    <img  class="img-thumb" width="100" height="100" src="images/sunsilk.jpg" alt="sunsilk">  sunsilk
+                                                                                    <a>
+                                                                                        
+                                                                                        (<b>3.5 dt</b>
+                                                                                        /piéce)
+                                                                                    </a>
+                                                                                    <br>
+                                                                                    <strong>Nombre de piéces :</strong>
+                                                                                    <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre3" value="3">
+                                                                                    <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre4" value="4">
+                                                                                    <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre5" value="5">
+                
+                
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr role="row" class="odd">
+                                                                                    <input type="hidden" name="members[]" value="29">
+                                                                                    <td class="sorting_1">
+                                                                                        <img  class="img-thumb" width="100" height="100" src="images/palmolive.jpg" alt="palmolive">  shampiong palmolive
+                                                                                        <a>
+                                                                                            
+                                                                                            (<b>3.5 dt</b>
+                                                                                            /piéce)
+                                                                                        </a>
+                                                                                        <br>
+                                                                                        <strong>Nombre de piéces :</strong>
+                                                                                        <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre6" value="6">
+                                                                                        <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre7" value="7">
+                                                                                        <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre8" value="8">
+                    
+                    
+                                                                                    </td>
+                                                                                </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <input type="hidden" name="members[]" value="50">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/mouchoirs.jpg" alt="mouchoirs">  Mouchoirs Rouleau
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>0.6 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                            <input type="hidden" name="members[]" value="31">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="images/signal.jpg" alt="signal">  Dentifrice signal
+                                                                                <a>
+                                                                                    
+                                                                                    (<b>3 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre12" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre13" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre14" value="11">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-6 ">
+                                                            <table class="table table-bordered dataTable no-footer table-striped" id="dataTable" width=100% cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width:100%;">
+                                                                <thead>
+                                                                    <tr role="row" style="background-color:skyblue">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls=" dataTable" rowspan="1" colspan="1" aria-sort="ascending"  style=" width:255px;">
+                                                                        <label style="font-family: 'Times New Roman', Times, serif;font-size: larger;" > Produit </label></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr role="row" class="odd">
+                                                                        <input type="hidden" name="members[]" value="29">
+                                                                        <td class="sorting_1">
+                                                                            <img  class="img-thumb" width="100" height="100" src="images/mouchoir.jpg" alt="Papier mouchoirs">  Papier Mouchoirs
+                                                                            <a>
+                                                                                (
+                                                                                <b>0.2 dt</b>
+                                                                                /piéce)
+                                                                            </a>
+                                                                            <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+        
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                            <input type="hidden" name="members[]" value="45">
+                                                                            <td class="sorting_1">
+                                                                                <img  class="img-thumb" width="100" height="100" src="/images/.jpg" alt="">  
+                                                                                <a>
+                                                                                    (
+                                                                                    <b>3.2 dt</b>
+                                                                                    /piéce)
+                                                                                </a>
+                                                                                <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+            
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                                <input type="hidden" name="members[]" value="30">
+                                                                                <td class="sorting_1">
+                                                                                    <img  class="img-thumb" width="100" height="100" src="/images/.png" alt="">  
+                                                                                    <a>
+                                                                                        (
+                                                                                        <b>2.6 dt</b>
+                                                                                        /piéce)
+                                                                                    </a>
+                                                                                    <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                                <input type="hidden" name="members[]" value="50">
+                                                                                <td class="sorting_1">
+                                                                                    <img  class="img-thumb" width="100" height="100" src="/images/.jpg" alt="">  
+                                                                                    <a>
+                                                                                        (
+                                                                                        <b>0.9 dt</b>
+                                                                                        /piéce)
+                                                                                    </a>
+                                                                                    <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+                
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                                <input type="hidden" name="members[]" value="31">
+                                                                                <td class="sorting_1">
+                                                                                    <img  class="img-thumb" width="100" height="100" src="/images/.jpg" alt="">  
+                                                                                    <a>
+                                                                                        (
+                                                                                        <b>3 dt</b>
+                                                                                        /piéce)
+                                                                                    </a>
+                                                                                    <br>
+                                                                                <strong>Nombre de piéces :</strong>
+                                                                                <strong>1</strong><input type="radio" name="ordre[]" id="radioboxordre9" value="9">
+                                                                                <strong>2</strong><input type="radio" name="ordre[]" id="radioboxordre10" value="10">
+                                                                                <strong>3</strong><input type="radio" name="ordre[]" id="radioboxordre11" value="11">
+                
+                                                                            </td>
+                                                                        </tr>
+                                                                </tbody>
+                                                            </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </form>
+                                <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTable_info" id="dataTable_info" role="status" aria-live="polite">10 élèments sont affichés parmi</div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                                <ul class="pagination">
+                                                        <li class="paginate_button page-item previous" id="dataTable_previous">
+                                                            <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Précedent</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item ">
+                                                            <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item next" id="dataTable_next">
+                                                            <a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">Next</a>
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div style="float: right;">
+                                        <button id="submittt" name="submit1" class="btn btn-primary waves-effect waves-light" type="submit">Valider</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+            
+            <footer class="footer bg-dark">
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+                                    <div class="col text-center">
+                                            <h1 class="text-white text-capitalize font-weight-light p-3">
+                                                Ched Darek !!
+                                            </h1>
+                                            <h3 class="text-light font-weight-light font-italic mb-3">
+                                                مع بعضنا .. نغلبوه 
+                                            </h3>
+                                            <div class="py-2">
+                                                <a href="#"><i class="fab fa-facebook text-priimary fa-2x mx-3"></i></a>
+                                                <a href="#"><i class="fab fa-twitter text-danger fa-2x mx-3 "></i></a>
+                                                <a href="#"><i class="fab fa-youtube  text-danger fa-2x mx-3 "></i></a>
+                                            
+                                            </div>
+                                            <p class="text-light">&copy; Copyright <script>document.write(new Date().getFullYear());</script> by Soldiers </p>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </footer>
+        
+ </body>
+ </html>      
