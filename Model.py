@@ -17,7 +17,8 @@ class User(db.Model):
     pwd =  db.Column(db.String(150), unique=False, nullable=False)
     municipality =  db.Column(db.String(150), unique=False, nullable=False)
     lieu =  db.Column(db.String(150), unique=False, nullable=False)
-    def __init__(self, email , nom , prenom , phone , pwd , municipality , lieu):
+    mtype = db.Column(db.Integer, unique=False, nullable=False)
+    def __init__(self, email , nom , prenom , phone , pwd , municipality , lieu, mtype):
         self.email = email
         self.nom = nom
         self.prenom = prenom
@@ -25,6 +26,8 @@ class User(db.Model):
         self.pwd = pwd
         self.municipality = municipality
         self.lieu = lieu
+        self.mtype = mtype
+
 
 
 class UserSchema(ma.Schema):
@@ -36,3 +39,4 @@ class UserSchema(ma.Schema):
     pwd = fields.String(required=True)
     municipality = fields.String(required=True)
     lieu = fields.String(required=True)
+    mtype = fields.Integer(required=True)
