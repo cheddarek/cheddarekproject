@@ -43,3 +43,37 @@ class UserSchema(ma.Schema):
     lieu = fields.String(required=True)
     mtype = fields.Integer(required=True)
     cin = fields.String(required=True)
+
+
+
+
+class Deliveries(db.Model):
+    __tablename__ = 'deliveries'
+    id = db.Column(db.Integer, primary_key=True)
+    idClient = db.Column(db.Integer, unique=False, nullable=False)
+    idVendor = db.Column(db.Integer, unique=False, nullable=True)
+    idDeliveryMan = db.Column(db.Integer, unique=False, nullable=True)
+    orderDate = db.Column(db.DateTime, nullable = False)
+    deliveryDate = db.Column(db.DateTime, nullable = True)
+    realDeliveryDate = db.Column(db.DateTime, nullable = True)
+    content = db.Column(db.String (300), nullable = False)
+    def __init__(self, id, idClient, idVendor, idDeliveryMan, orderDate, deliveryDate, realDeliveryDate, content):
+        self.id = id
+        self.idClient = idClient
+        self.idVendor = idVendor
+        self.idDeliveryMan = idDeliveryMan
+        self.orderDate = orderDate
+        self.deliveryDate = deliveryDate
+        self.realDeliveryDate = realDeliveryDate
+        self.content = content
+
+
+class DeliveriesSchema(ma.Schema):
+    id = fields.Integer()
+    idClient = fields.Integer()
+    idVendor = fields.Integer()
+    idDeliveryMan = fields.Integer()
+    orderDate = fields.DateTime()
+    deliveryDate = fields.DateTime(required=True)
+    realDeliveryDate = fields.DateTime()
+    content = fields.String(required=True)
