@@ -30,6 +30,7 @@ class UserResource(Resource):
             pwd=json_data['pwd'],
             municipality=json_data['municipality'],
             lieu=json_data['lieu'],
+            mtype=json_data['mtype']
         )
 
         db.session.add(user)
