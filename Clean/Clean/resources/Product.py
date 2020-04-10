@@ -25,25 +25,26 @@ class ProductResource(Resource):
         return {"status": 'success', 'data': result}, 201
 
     def put(self):
-        data = request.get_json()
-        get_product = Product.query.get(id)
-        if data.get('nom'):
-            get_product.nom = data['nom']
-        if data.get('description'):
-            get_product.description = data['description']
-        if data.get('prix'):
-            get_product.prix = data['prix']
-        if data.get('image'):
-            get_product.image = data['image']
-        db.session.add(get_product)
+        json_data = request.get_json()
+        product = Product.query.filter_by(id=json_data['id']).first()
+        if json_data.get('nom'):
+            product.nom = json_data['nom']
+        if json_data.get('description'):
+            product.description = json_data['description']
+        if json_data.get('prix'):
+            product.prix = json_data['prix']
+        if json_data.get('image'):
+            product.image = json_data['image']
+        db.session.add(product)
         db.session.commit()
         product_schema = ProductSchema(only=['id', 'nom', 'description', 'prix', 'image'])
-        product = product_schema.dump(get_product)
+        product = product_schema.dump(product)
         return make_response(jsonify({"product": product}))
 
     def delete(self):
-        get_product = Product.query.get(id)
-        db.session.delete(get_product)
+        json_data = request.get_json()
+        product = Product.query.filter_by(id=json_data['id']).first()
+        db.session.delete(product)
         db.session.commit()
         return make_response("", 204)
 
