@@ -98,3 +98,17 @@ class ProductSchema(ma.Schema):
     description = fields.String(required=True)
     prix = fields.Number(required=True)
     image = fields.String(required=True)
+
+
+class Municipality(db.Model):
+    __tablename__ = "municipality"
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(20))
+
+    def __init__(self,nom):
+        self.nom = nom
+
+
+class MunicipalitySchema(ma.Schema):
+    id = fields.Integer()
+    nom = fields.String(required=True)
