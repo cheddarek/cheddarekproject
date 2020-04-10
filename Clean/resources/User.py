@@ -23,8 +23,8 @@ class UserResource(Resource):
         if user:
             return {'message': 'User already exists'}, 400
         user = User(
-            email=json_data['email']
-            ,nom=json_data['nom'],
+            email=json_data['email'],
+            nom=json_data['nom'],
             prenom=json_data['prenom'],
             phone=json_data['phone'],
             pwd=json_data['pwd'],

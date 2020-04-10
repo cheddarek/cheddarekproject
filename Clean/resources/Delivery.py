@@ -10,8 +10,6 @@ class DeliveriesResource(Resource):
     def get(self):
         deliveries = Deliveries.query.all()
         deliveries = deliveries_schema.dump(deliveries)
-
-        tmp = deliveries[0]['content']
         return {'status': 'success', 'data': deliveries}, 200
 
     def post(self):

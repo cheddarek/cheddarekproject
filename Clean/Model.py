@@ -93,7 +93,7 @@ class Product(db.Model):
         self.image = image
 
 class ProductSchema(ma.Schema):
-    id = fields.Number(dump_only=True)
+    id = fields.Integer()
     nom = fields.String(required=True)
     description = fields.String(required=True)
     prix = fields.Number(required=True)
