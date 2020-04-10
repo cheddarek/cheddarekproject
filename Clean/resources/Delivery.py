@@ -10,6 +10,8 @@ class DeliveriesResource(Resource):
     def get(self):
         deliveries = Deliveries.query.all()
         deliveries = deliveries_schema.dump(deliveries)
+
+        tmp = deliveries[0]['content']
         return {'status': 'success', 'data': deliveries}, 200
 
     def post(self):
@@ -45,8 +47,8 @@ class DeliveriesResource(Resource):
 
         delivery = Deliveries.query.filter_by(id=data['id']).first()
         if not delivery:
-            return {'message': 'Category does not exist'}, 400
-        delivery.name = data['id']
+            return {'message': 'Delivery does not exist'}, 400
+        delivery.idClient = data['idClient']
         db.session.commit()
 
         result = delivery_schema.dump(delivery)
@@ -63,3 +65,8 @@ class DeliveriesResource(Resource):
         db.session.commit()
         result = delivery_schema.dump(delivery)
         return {"status": 'success', 'data': result}, 204
+    def listproducts(self):
+        deliveries = Deliveries.query.all()
+        deliveries = deliveries_schema.dump(deliveries)
+        tmp = deliveries[0]['content']
+        return {'status': 'success', 'data': deliveries}, 200

@@ -77,3 +77,24 @@ class DeliveriesSchema(ma.Schema):
     deliveryDate = fields.DateTime(required=True)
     realDeliveryDate = fields.DateTime()
     content = fields.String(required=True)
+
+
+class Product(db.Model):
+    __tablename__ = "products"
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(10))
+    description = db.Column(db.String(20))
+    prix = db.Column(db.Float)
+    image = db.Column(db.String(100))
+    def __init__(self,nom,description,prix, image):
+        self.nom = nom
+        self.description = description
+        self.prix = prix
+        self.image = image
+
+class ProductSchema(ma.Schema):
+    id = fields.Number(dump_only=True)
+    nom = fields.String(required=True)
+    description = fields.String(required=True)
+    prix = fields.Number(required=True)
+    image = fields.String(required=True)
