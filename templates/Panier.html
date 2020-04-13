@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/Remplir_le_panier.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b5618f4aef.js" crossorigin="anonymous"></script>
+</head>
+<body id="page-top">
+        <div class="navbar navbar-expand navbar-dark bg-dark static-top">
+                <ul class="navbar-nav ml-auto ml-md-0">
+                    <li class="nav-item dropright no-arrow">
+                        <a href="#" class="nav-link dropdown-toggle " role="button" id="userDropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                            <i class="fas fa-user-circle fa-fw" id=logout></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" >
+                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#logoutModal">Se Déconnecter</a>
+                        </div>
+        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accueil</a>
+                      </li>
+                    
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Catégorie de produits
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Produits alimentaires</a>
+                              <a class="dropdown-item" href="#">Produits de propreté</a>
+                              
+                    </li>
+                    
+                </ul>
+                <form class="form-inline navbar-right my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search" name="search">
+                    <button class="btn  btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+        </div>
+        <div id="wrapper">
+            <div id="content-wrapper">
+                <div class="container-fluid">
+                    <div class="col-12-sm">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <i class="fas fa-table">
+
+                                </i>
+                                Choisir les produits 
+                            </div>
+                            
+                                        <div class="container">    
+                                            <div class="row">
+                                                <div class="col-md-3 mt-3">
+                                                    <div class="card">
+                                                        <img src="images/break.jpg" alt="break" class="card-img-top" height="200" >
+                                                        <div class="card-body">
+                                                           
+                                                            <h5 class="text-center">
+                                                                break
+                                                            </h5>
+                                                            <p class="text-center"> 
+                                                                Prix: <b>0.4</b>dt
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="#" class="float-left btn btn-sm btn-primary">Détails</a>
+                                                            <a href="#" class="float-right btn btn-sm btn-warning">Ajouter au panier</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="col-md-3 mt-3">
+                                                    <div class="card">
+                                                        <img src="images/passion.jpg" alt="Passion" class="card-img-top" height="200" >
+                                                        <div class="card-body">
+                                                           
+                                                            <h5 class="text-center">
+                                                                Passion
+                                                            </h5>
+                                                            <p class="text-center"> 
+                                                                Prix: <b>3.2</b>dt
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="#" class="float-left btn btn-sm btn-primary">Détails</a>
+                                                            <a href="#" class="float-right btn btn-sm btn-warning">Ajouter au panier</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="col-md-3 mt-3">
+                                                    <div class="card">
+                                                        <img src="images/chocolat.png" alt="Said" class="card-img-top" height="200" >
+                                                        <div class="card-body">
+                                                           
+                                                            <h5 class="text-center">
+                                                                Said
+                                                            </h5>
+                                                            <p class="text-center"> 
+                                                                Prix: <b>2.6</b>dt
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="#" class="float-left btn btn-sm btn-primary">Détails</a>
+                                                            <a href="#" class="float-right btn btn-sm btn-warning">Ajouter au panier</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="col-md-3 mt-3">
+                                                    <div class="card">
+                                                        <img src="images/tris.jpg" alt="Tris" class="card-img-top" height="200" >
+                                                        <div class="card-body">
+                                                           
+                                                            <h5 class="text-center">
+                                                                Tris
+                                                            </h5>
+                                                            <p class="text-center"> 
+                                                                Prix: <b>0.9</b>dt
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="#" class="float-left btn btn-sm btn-primary">Détails</a>
+                                                            <a href="#" class="float-right btn btn-sm btn-warning">Ajouter au panier</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                            <h1 class="text-white text-capitalize font-weight-light p-3">
+                                Ched Darek !!
+                            </h1>
+                            <h3 class="text-light font-weight-light font-italic mb-3">
+                                مع بعضنا .. نغلبوه 
+                            </h3>
+                            <div class="py-2">
+                                <a href="#"><i class="fab fa-facebook text-priimary fa-2x mx-3"></i></a>
+                                <a href="#"><i class="fab fa-twitter text-danger fa-2x mx-3 "></i></a>
+                                <a href="#"><i class="fab fa-youtube  text-danger fa-2x mx-3 "></i></a>
+                            
+                            </div>
+                            <p class="text-light">&copy; Copyright <script>document.write(new Date().getFullYear());</script> by Soldiers </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+    </body>
+    </html>
